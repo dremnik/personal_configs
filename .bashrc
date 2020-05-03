@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -100,6 +100,7 @@ alias mygcc='gcc -Wall -pedantic -std=c99'
 alias j='jobs -l'
 alias df='df -kTh'
 alias which='type -all'
+alias python='python3'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -125,3 +126,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export PATH="/home/andyroo/.local/bin:$PATH"
+
+
+eval "$(thefuck --alias)"

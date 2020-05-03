@@ -1,11 +1,27 @@
-set nocompatible
+" Basic settings
 
 syntax on
-filetype indent plugin on
+set nocompatible
+set encoding=utf-8
+set clipboard=unnamedplus
+filetype plugin indent on
+set showmode
+set wildmenu
+set autoindent
 set number
 set hidden
 set history=100
-set ai
+set ruler
+set ignorecase
+set smartcase
+set showmatch
+set hlsearch
+set incsearch
+set wrap
+set linebreak
+
+inoremap jk <ESC>
+let mapleader=" "
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
