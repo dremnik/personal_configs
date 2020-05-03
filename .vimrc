@@ -1,16 +1,17 @@
 " Basic settings
 
+filetype plugin indent on
 syntax on
 set nocompatible
+set encoding=utf-8
+set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set encoding=utf-8
-set clipboard=unnamedplus
-filetype plugin indent on
 set showmode
 set wildmenu
-set autoindent
+set ai
+set smartindent
 set number
 set relativenumber
 set hidden
