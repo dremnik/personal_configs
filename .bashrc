@@ -96,7 +96,7 @@ alias lf="ls -l | grep -v '^d'"
 alias mkdir='mkdir -p'
 alias rm='rm -i'
 alias vi='vim'
-alias mygcc='gcc -Wall -pedantic -std=c99'
+alias mygcc='gcc -Wall -pedantic -std=c99 -ggdb'
 alias j='jobs -l'
 alias df='df -kTh'
 alias which='type -all'
