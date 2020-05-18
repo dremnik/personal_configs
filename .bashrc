@@ -101,6 +101,8 @@ alias j='jobs -l'
 alias df='df -kTh'
 alias which='type -all'
 alias python='python3'
+alias ln='ln -s'
+alias fd='fdfind'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -116,8 +118,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -128,6 +128,8 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="/home/andyroo/.local/bin:$PATH"
-
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 eval "$(thefuck --alias)"
+
+
