@@ -12,21 +12,15 @@ execute pathogen#infect()
 
 filetype plugin indent on
 syntax on
-set nocompatible
-set encoding=utf-8
 set clipboard=unnamedplus
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set showmode
-set wildmenu
-set ai
 set smartindent
 set number
 set relativenumber
 set hidden
-set history=100
-set ruler
 set ignorecase
 set smartcase
 set showmatch
@@ -35,10 +29,15 @@ set incsearch
 set wrap
 set linebreak
 
+" Persistent undo
+set undodir=~/.vim/undodir
+set undofile
+
 autocmd FileType c setlocal commentstring=//%s
 
 nnoremap <tab> %
 vnoremap <tab> %
+noremap Q !!sh<CR>
 inoremap jk <ESC>
 map <C-p> :NERDTreeToggle<CR>
 map <C-t> :Files<CR>
@@ -55,8 +54,8 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme onedark
-let g:airline_theme='onehalfdark'
+colorscheme base16-atelier-dune
+let g:airline_theme='nord'
 let g:airline#extensions#whitespace#enabled=0
 
 
