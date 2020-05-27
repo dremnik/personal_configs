@@ -55,7 +55,7 @@ if exists('+termguicolors')
 endif
 
 colorscheme base16-atelier-dune
-let g:airline_theme='nord'
+let g:airline_theme='base16_atelier_dune'
 let g:airline#extensions#whitespace#enabled=0
 
 
