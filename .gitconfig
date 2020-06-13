@@ -1,0 +1,11 @@
+[user]
+	email = andjones100@gmail.com
+	name = andyroo
+[credential]
+	helper = cache --timeout=3600
+[core]
+	editor = vi
+
+[alias]
+	qc = commit -a -m
+	graph = log --all --graph --decorate --oneline
