@@ -3,6 +3,7 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 
+" Autocompletion
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
@@ -41,6 +42,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 autocmd FileType c setlocal commentstring=//%s
+autocmd FileType h setlocal commentstring=//%s
 
 " Remaps
 nnoremap <tab> %
@@ -48,7 +50,7 @@ vnoremap <tab> %
 noremap Q !!sh<CR>
 inoremap jk <ESC>
 map <C-p> :NERDTreeToggle<CR>
-map <C-t> :Files<CR>
+map <C-i> :Files<CR>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
@@ -57,6 +59,9 @@ noremap <leader>c :w !xsel -ib<cr><cr>
 
 let mapleader=" "
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+let g:go_fmt_command = "goimports"    " Run goimports along gofmt on each save     
+let g:go_auto_type_info = 1           " Automatically get signature/type info for object under cursor  
 
 " True color support
 if exists('+termguicolors')
