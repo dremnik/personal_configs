@@ -63,6 +63,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 let g:go_fmt_command = "goimports"    " Run goimports along gofmt on each save     
 let g:go_auto_type_info = 1           " Automatically get signature/type info for object under cursor  
 
+let g:rustfmt_autosave = 1
+let g:ale_linters = {'rust': ['rustc', 'rls']}
+
 " True color support
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
